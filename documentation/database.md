@@ -48,7 +48,7 @@ En la tabla de personajes me interesa el campo `anime_id`, como te podes imagina
 
 ## Schema!
 
-Una vez hayas entendido las tablitas de arriba, podes ver todas las tablas que tenemos en la aplicación en el archivo `schema.rb` en la carpeta `db/`
+Una vez hayas entendido las tablitas de arriba, podes ver todas las tablas que tenemos en la aplicación en el archivo `schema.rb` en la carpeta `db/`. Recordamos que este archivo sólo se crea una vez completado el readme (particularmente con `rails db:create`).
 
 ---
 
