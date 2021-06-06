@@ -4,19 +4,17 @@ El back nace porque queremos tener una forma segura de persistir datos, es nuest
 
 Cuando "levantamos" el back, lo que estamos haciendo es asignarle un puerto en la compu donde el programa está "escuchando". Es como asignarle un id a nivel local, rails usa el puerto `3000`. La compu toma esa ida y todos los pedidos HTTP que lleguen al puerto 3000 de nuestra compu los pasa al programa nuestro de rails.
 
----
+* Un poco de info: Rails es convención sobre configuración, o en criollo, te da un monton de cosas siempre y cuando vos te ajustes a sus reglas (forma de escribir las cosas) que te pide. Empezando por las carpetas y que cosas se ponen en cada lugar, hasta el detalle de cuando algo va en singular o plural. 
 
-Rails es convención sobre configuración, o en criollo, te da un monton de cosas siempre y cuando vos te ajustes a sus reglas (forma de escribir las cosas) que te pide. Empezando por las carpetas y que cosas se ponen en cada lugar, hasta el detalle de cuando algo va en singular o plural. 
+  * Más sobre singular/plural:
 
-Un poco más de info de singular/plural: Para que no te complique esto, podes pensarlo como si fuese lenguaje hablado. La tabla en base de datos y el controlador trata con todos las instancias de un modelo, por eso hablamos de la `characters_table` o `characters_controller`. Cuando tratas con el modelo usamos singular ya que nos muestra como es 1 personaje cualquiera (`character.rb`).
+    Para que no te complique esto, podes pensarlo como si fuese lenguaje hablado. La tabla en base de datos y el controlador trata con todos las instancias de un modelo, por eso hablamos de la `characters_table` o `characters_controller`. Cuando tratas con el modelo usamos singular ya que nos muestra como es 1 personaje cualquiera (`character.rb`).
 
-Si ya entendiste relaciones en base de datos, cuando una relacion es 1-N (ej: personajes-anime) podemos hacer cosas del tipo `Anime.where(name: 'Naruto').characters`. Hago hincapié en el plural character**s** porque un anime tiene muchos personajes. Esa linea nos devuelve un arreglo de personajes `[<Character1>, <Character2>, ..., <CharacterN>]`.
+    Si ya entendiste relaciones en base de datos, cuando una relacion es 1-N (ej: personajes-anime) podemos hacer cosas del tipo `Anime.where(name: 'Naruto').characters`. Hago hincapié en el plural character**s** porque un anime tiene muchos personajes. Esa linea nos devuelve un arreglo de personajes `[<Character1>, <Character2>, ..., <CharacterN>]`.
 
-Por el otro lado de la relación 1-N, podemos hacer algo así: `Character.where(name: 'Alphonse Elric').anime`. Usamos singular porque 1 personaje tiene 1 anime. Esta linea nos devuelve un objeto de anime `<Anime>`
+    Por el otro lado de la relación 1-N, podemos hacer algo así: `Character.where(name: 'Alphonse Elric').anime`. Usamos singular porque 1 personaje tiene 1 anime. Esta linea nos devuelve un objeto de anime `<Anime>`
 
-> Fun fact, si tuvieses un modelo `person`, rails va a esperar un `people_controller`, y tiene algunos otros plurales no regulares del ingles definidos.
-
----
+  * Fun fact, si tuvieses un modelo `person`, rails va a esperar un `people_controller`, y tiene algunos otros plurales no regulares del ingles definidos.
 
 Para comunicarnos con él, nos ofrece los **controladores**.
 

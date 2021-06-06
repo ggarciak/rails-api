@@ -2,7 +2,9 @@
 
 Una base de datos tiene una tabla por modelo (generalmente), ya que son los modelos son las entidades que usamos para modelar el mundo real y es la información que queremos persistir, dejo dos ejemplos de la tabla de character y de la tabla de anime:
 
-### Tabla anime
+---
+
+## Tabla anime ###
 
 | nombre del campo | tipo del campo |
 | ---------------- | -------------- |
@@ -13,7 +15,7 @@ Una base de datos tiene una tabla por modelo (generalmente), ya que son los mode
 
 ---
 
-### Tabla character
+## Tabla character
 
 | nombre del campo | tipo del campo |
 | ---------------- | -------------- |
@@ -33,7 +35,7 @@ En el 99% de las tablas existe un campo `id`, de tipo `int` (integer = numero en
 Ambas tienen un campo con el nombre ya que son dos cosas que tienen nombre en la vida real, un ejemplo de un modelo que no tendría nombre sería por ejemplo una tabla de autos. Nombre es un `string` (máximo 255 caracteres).
 
 ```
-Ejercicio: Que campos se te ocurre que tendría una tabla de autos?
+    Ejercicio: Que campos se te ocurre que tendría una tabla de autos?
 ```
 
 > Un poco de información extra: Podemos pedir restricciones sobre los campos, como que sea único (no haya dos personajes con el mismo nombre), no sea vacio (no exista un personaje sin nombre), que tenga un valor por defecto, etc.
@@ -43,6 +45,18 @@ Character tiene un campo de texto que es la biografía del personaje (hasta 6553
 En ambos modelos (y en el 99% de los modelos) también tenemos dos campos de cuando fue creado, y cuando fue la última vez que fue modificado (a veces pueden ser útiles y no cuesta mucho espacio agregarselo al modelo)
 
 En la tabla de personajes me interesa el campo `anime_id`, como te podes imaginar tiene el `id` del anime al que pertenece. Este campo es el que nos permite tener una **relación** entre el modelo personaje y el modelo anime.
+
+## Schema!
+
+Una vez hayas entendido las tablitas de arriba, podes ver todas las tablas que tenemos en la aplicación en el archivo `schema.rb` en la carpeta `db/`
+
+---
+
+---
+
+---
+
+# WIP
 
 ## Migraciones
 
@@ -60,6 +74,3 @@ Los modelos pueden estar relacionados:
 
 Voy a detallar esto en un (Round 3)
 
-## Schema!
-
-Una vez hayas entendido las tablitas de arriba, podes ver todas las tablas que tenemos en la aplicación en el archivo `schema.rb` en la carpeta `db/`
