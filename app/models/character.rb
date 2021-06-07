@@ -11,7 +11,7 @@ class Character < ApplicationRecord
   private
     def not_el_mystery
       unless self.biography
-        self.biopgraphy = "Por que sin biografía?, quien sos? Juan pito?"
+        self.biography = "Por que sin biografía?, quien sos? Juan pito?"
       end
     end
 end
