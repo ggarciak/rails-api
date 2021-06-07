@@ -48,7 +48,15 @@ En la tabla de personajes me interesa el campo `anime_id`, como te podes imagina
 
 ## Migraciones
 
-Para modificar la base de datos, usamos migraciones. Son quienes crean, modifican y eliminan tablas y sus valores. Las migraciones son también un paso a paso de como se construyó el esquema de la base, y como tal es importante que esten correctamente ordenados en fechas.Este orden se suele dar normalmente porque cuando creas una migración le pones la fecha en la que la creas.
+Para modificar la base de datos, usamos migraciones. Son quienes crean, modifican y eliminan tablas y sus valores. Las migraciones son también un paso a paso de como se construyó el esquema de la base, y como tal es importante que esten correctamente ordenados en fechas. Este orden se suele dar normalmente porque cuando creas una migración le pones la fecha en la que la creas.
+
+Las migraciones tienen un nombre de archivo de la forma
+
+```
+  YYYYMMDDHHmmss_breve_descripcion.rb
+```
+
+Una vez ejecutada una migración se guarda la como última fecha en la que se corrieron las migraciones, por lo que agregar migraciones con un nombre de archivo con fecha previa a la última migración creada no es válido.
 
 * Info extra:
 
@@ -76,12 +84,6 @@ Por más info de migraciones, la [guía de rails es muy buena](https://guides.ru
 ## Schema!
 
 Una vez hayas entendido las tablitas de arriba, podes ver todas las tablas que tenemos en la aplicación en el archivo `schema.rb` en la carpeta `db/`. Recordamos que este archivo sólo se crea una vez completado el readme (particularmente con `rails db:create`).
-
-
-Las migraciones tienen un nombre de archivo de la forma
-```
-  YYYYMMDDHHmmss_breve_descripcion.rb
-```
 
 ---
 
