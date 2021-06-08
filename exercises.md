@@ -64,18 +64,19 @@ Estaba pensando en algo sencillo de hacer pero no caer en una agenda de personaj
 
   - Quiero que los personajes tengan poderes con los cuales van a atacar.
 
+  - Un personaje va a tener muchos poderes, pero un poder tiene 1 sólo personaje (1-N).
+
   - Estos poderes tienen una cantidad de daño que vamos a representar como un entero y un elemento.
 
   - En un comienzo, los elementos pueden ser "Fuego", "Planta" y "Agua". Esto en ralis se modela con un `enumerado`.
 
   - El modelo no debe permitir la creacion de un poder sin elemento (notar que no trae un valor por defecto tampoco)
 
-  - Para mantenerlo sencillo, un personaje va a tener muchos poderes, pero un poder tiene 1 sólo personaje (1-N)
-
   - Ayuda: No es necesario tener un controlador para este modelo por ahora. Por que te parece que pasa esto?
 
   - No olvidemos que queremos devolver esta información al front de alguna manera! Que se te ocurre?
+  
 
   ** Puntos extra: **
 
-  - Permitir que un poder lo tenga más de un personaje (ej: kamehameha podría ser un poder de Goku o de Gohan). Ver `database.md`
+  - Permitir que un poder lo tenga más de un personaje (ej: kamehameha podría ser un poder de Goku o de Gohan) (M-N). Ver `database.md`

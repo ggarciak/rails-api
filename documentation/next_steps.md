@@ -1,7 +1,5 @@
 1. Completar documento de base de datos
 
-    1.1 Migraciones y explicar comandos de migraciones en `rails.md`
-
     1.2 Relaciones
 
 2. Hablar de HTTP
