@@ -56,7 +56,7 @@ Los modelos son las entidades que vamos a manejar en la app y suelen representar
 
 * `db/migrate`
 
-  Acá van los archivos que modifican la base de datos (Round 2 del `database.md`)
+  Acá van los archivos que modifican la base de datos, más información de eso en `database.md` o [aqui](https://guides.rubyonrails.org/v3.2/migrations.html)
 
 ## Archivos extras que nos interesan
 
@@ -84,11 +84,30 @@ Los modelos son las entidades que vamos a manejar en la app y suelen representar
 
   Rails nos brinda comandos para manejar la base de datos:
 
-  * rake db:create / rake db:drop
-  * rake db:migrate
-  * rake db:seed
+  ```
+    rake db:create
+  ```
 
-  *WIP: Completar con el round 2 DB*
+  Nos crea las bases de datos de desarrollo y test en postgres.
+  Saca la configuración de `config/database.yml`
+
+  ```
+    rake db:drop
+  ```
+
+  Borra las bases de datos y desarrollo.
+
+  ```
+    rake db:migrate
+  ```
+
+  Ejecuta las migraciones de `db/migrations`. Más info en `database.md`
+
+  ```
+    rake db:seed
+  ```
+
+  Ejecuta el código de  `db/seed`.
 
 * ### Rutas
 

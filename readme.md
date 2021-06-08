@@ -40,7 +40,7 @@ Para instalar rails lo vamos a hacer mismo sobre ruby, por eso no tiene link, pe
 
 ### Empezando a amigarse con la terminal: ###
 
-En windows, podes levantar una terminar haciendo `Ctrl + R`, que abre el ejecutador de programas de Windows, y ahi escribimos `cmd`. Más adelante cuando bajemos el proyecto voy a instruirte un poco en comandos utiles, y como movernos en la terminal pero por ahora vamos limitarnos a la instalación
+En windows, podes levantar una terminar haciendo "Ctrl + R", que abre el ejecutador de programas de Windows, y ahi escribimos "cmd". Más adelante cuando bajemos el proyecto voy a instruirte un poco en comandos utiles, y como movernos en la terminal pero por ahora vamos limitarnos a la instalación
 
 ``` 
 
@@ -128,6 +128,15 @@ Una vez que tengamos la carpeta del proyecto creada (en este ejemplo 'AnimeApp')
 > Nota2: Para más info de los comandos de git hay un archivo `git.md` en la carpeta `documentation`.
 
 Si ejecutamos un dir vamos a ver que apareció una carpeta nueva (`rails-api`), movamos nos adentro de esa carpeta.
+
+```
+  ### Extra tip para la terminal + visual studio ###
+
+  Si en la parte 1 instalaste el visual studio code, ahora desde la terminal podes abrir cualquier carpeta en visual studio code escribiendo "code ."
+
+  Ej:
+    C:\Users\Bruno\Desktop\AnimeApp> code .
+```
 
 ---
 
