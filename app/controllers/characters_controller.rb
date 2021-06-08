@@ -36,6 +36,12 @@ class CharactersController < ApplicationController
     end
   end
 
+  def deck
+    characters = Character.all.name.shuffle
+    decks = characters.slice(characters/2) # Agregar condicional en caso de que no sea divisible por 2
+    render :json
+  end
+
   private
     def set_character
       @character = Character.find(params[:id])
@@ -44,5 +50,6 @@ class CharactersController < ApplicationController
     def character_params
       params.require(:character).permit(:name, :biography, :anime_id)
     end
-end
+
+   end
 
