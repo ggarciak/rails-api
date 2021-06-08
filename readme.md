@@ -211,5 +211,7 @@ Y `localhost:3000/animes`?
 
   * Hay una carpeta que no es parte de la estructura de RoR, `documentation`.
   
-    Ahí dejé guias de distintas tematicas, te recomendaría empieces por la de rails pero la idea es un poco que sean independientes?, no sé todavía, proba y contame
+    Ahí dejé guias de distintas tematicas, te recomendaría empieces por la de rails y vayas leyendo las demás.
+    
+    También hay un `exercises.md` en la carpeta raíz con ejercicios para empezar a hacer cosas.
   
