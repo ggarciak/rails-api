@@ -1,22 +1,23 @@
 # Preparaos
 
-Vamos a tener que instalar varias cosas para empezar, esta instalación está pensada para windows pero las cosas que usamos tienen su contraparte en ubuntu y la instalación es hasta más fácil. Los titulos son links
+Vamos a tener que instalar varias cosas para empezar. Esta instalación está pensada para windows, pero las cosas que usamos tienen su contraparte en Ubuntu y la instalación es hasta más fácil. Los titulos son links
 
 ## 1. [Git](https://git-scm.com/download/win)
 
-Tengo entendido más o menos sabes de que va git con sus ramas y eso pero es importante lo manejes mejor (no ahora, a futuro). Voy a subir un documento con comandos de git y una guia de como se suele usar (git flow) para cuando quieras profundizar un poco más en esto
+Cuando se trabaja con código, es muy común y útil manejar varias versiones del mismo. Una versión del código puede ser la que están usando los usuarios en sus celulares (llamada versión en producción) y otra para uso interno y testeo antes de efectivamente largarla. Para organizar el trabajo de versionar código sin tener que tener varios cientos de archivos existe Git. En este tutorial hay un documento con comandos de git y una guía de cómo se suele usar (git flow) para cuando quieras profundizar un poco más en esto.
+
+Existe una interfaz gráfica (programa tradicional con ventanas) que facilita el uso de Git, aunque se suele usar por la consola de comandos.
+
 
 ### 1.1. (Opcional) Instalar un editor de texto
 
-GIT te permite integrarse con un editor de texto, en algunos escenarios (por ahora lejanos para nosotros) git a veces precisa que le escribas algo.
-
-> Info extra: Windows es piola y te recomienda lo hagas con un editor de texto de verdad y no la terminal, en ubuntu vamos a usar la terminal y el editor no tiene mucho misterio pero vayamos sumando de a poco.
+Podríamos escribir el código en cualquier herramienta que permita ingresar texto (como Microsoft Word o LibreOffice), pero hay herramientas diseñadas específicamente para esta función que nos facilitan muchas cosas.
 
 Recomendado por todos: [visual studio code](https://code.visualstudio.com/download), yo no lo conozco mucho pero me lo baje para hacer este tutorial y vamos a ir conociendolo, tengo entendido que está bueno
 
 ### 1.2. Instalar Git
 
-En windows la descarga trae un exe con una guia de instalación y casi siempre dale a la opción que trae por defecto, salvo en [select additional tasks](https://i.imgur.com/Dsid9Rs.png) y en el [terminal emulator](https://i.imgur.com/luOx65o.png).
+En windows la descarga trae un .exe con una guía de instalación y casi siempre dale a la opción que trae por defecto, salvo en [select additional tasks](https://i.imgur.com/Dsid9Rs.png) y en el [terminal emulator](https://i.imgur.com/luOx65o.png).
 
 ---
 
@@ -24,23 +25,23 @@ En windows la descarga trae un exe con una guia de instalación y casi siempre d
 
 ### 2.1 Instalar ruby
 
-Ruby es el lenguaje de programación que vamos a usar, cuando digo instalar ruby en realidad estamos instalando el compilador de ruby, es decir un programita que agarra la porquería que nosotros escribamos en .rb y lo convierta en un programa
+Ruby es el lenguaje de programación que vamos a usar. Cuando digo instalar ruby, en realidad estamos instalando el compilador de ruby, es decir un programita que agarra la porquería que nosotros escribamos en un archivo .rb y lo convierta en un programa que la computadora pueda ejecutar.
 
 La versión de ruby de un proyecto se deja escrito en el archivo .ruby-version que está en la carpeta raiz del proyecto, te dejo un link para instalar esa versión ([2.6.7 para windows 64 bits (x64)](https://github.com/oneclick/rubyinstaller2/releases/download/RubyInstaller-2.6.7-1/rubyinstaller-devkit-2.6.7-1-x64.exe)). Ese link salió de [acá](https://rubyinstaller.org/downloads/) que encontré esa página en google buscando `install ruby windows`, todo este texto extra es para que te vayas haciendo amigo con googlear TODO.
 
-La instalación no tiene mucho misterio dale todo lo por defecto. Levanta una consola que tira unos poderes cuando apretas enter ni idea que hizo.
+La instalación no tiene mucho misterio. Dale todo lo por defecto. Levanta una consola que tira unos poderes cuando apretas enter ni idea que hizo.
 
 ### 2.2 Instalar Rails
 
-Rails es el framework que vamos a usar para trabajar sobre ruby, es lo todo el tema de mvc y eso. Profundizo teoricamente más adelante en la sección de rails, ahora vamos a limitarnos a instalarlo.
+Más adelante vamos a hablar sobre qué es y cómo sacarle provecho a Rails, pero por ahora vamos a limitarnos a instalarlo.
 
-Para instalar rails lo vamos a hacer mismo sobre ruby, por eso no tiene link, pero primero hay que levantar una terminal 😱.
+Para instalar Rails, lo vamos a hacer usando Ruby. Suena extraño pero Rails no es más que una librería (de las más grandes que hay en Rails) del lenguaje de programación Ruby. Lo primero hay que hacer es levantar una terminal 😱.
 
 ```
 
 ### Empezando a amigarse con la terminal: ###
 
-En windows, podes levantar una terminar haciendo `Ctrl + R`, que abre el ejecutador de programas de Windows, y ahi escribimos `cmd`. Más adelante cuando bajemos el proyecto voy a instruirte un poco en comandos utiles, y como movernos en la terminal pero por ahora vamos limitarnos a la instalación
+En Windows, podés levantar una terminar haciendo `Ctrl + R`, que abre el ejecutador de programas de Windows, y ahí escribimos `cmd`. Más adelante cuando bajemos el proyecto voy a instruirte un poco en comandos útiles, y cómo movernos en la terminal, pero por ahora vamos limitarnos a la instalación.
 
 ``` 
 
@@ -50,15 +51,15 @@ Ejecutamos entonces:
   gem install rails
 ```
 
-Y listo, podes comprobar que quedó instalado imprimiendo la versión `rails -v`
+Y listo, podes comprobar que quedó instalado imprimiendo la versión escribiendo en la consola `rails -v`
 
 ---
 
 ## 3. Base de datos - [Instalar PostgreSQL](https://www.enterprisedb.com/downloads/postgres-postgresql-downloads)
 
-Como no vamos a hacer un back de jugete vamos a precisar tener una base de datos!. Para eso vamos a instalar postgreSQL. Yo baje la `13.3` por ser la última, probemos con esa y si se rompe actualizo esto.
+Como no vamos a hacer un back de jugete, vamos a precisar tener una base de datos que persista la información cuando apaguemos la compu! Para eso, vamos a instalar un programa que gestiona bases de datos: postgreSQL. Yo baje la `13.3` por ser la última, probemos con esa y si se rompe actualizo esto.
 
-El instalador no tiene mucho miterio, dale todo el por defecto y en un momento te pide una contraseña, yo use `12345678`, no es importante que sea polenta porque es para tu base local. Es importante que no importa que contraseña utilices, modifiques el `config/database.yml` con esa contraseña para que rails pueda usar tu postgres.
+El instalador no tiene mucho misterio. Dale todo el por defecto y en un momento te pide una contraseña, yo usé `12345678`, no es importante que sea polenta porque es para uso interno del programa en tu compu. A su vez, cuando creamos una base de datos vamos a tener que ponerle una contraseña para que, si la hiciéramos pública no cualquiera pueda leerla. La contraseña que utilices para la base de datos del proyecto, la vas a tener que escribir en el archivo `config/database.yml` para que Rails pueda usarla con tu Postgres.
 
 En otro momento te abre un segundo wizard  `stack_builder`, cerralo nomas.
 
@@ -90,8 +91,8 @@ Llego momento de hacernos amigos de la terminal, dejo un par de comandos útiles
 | start . | xdg-open . | Abre la carpeta actual en el explorador de carpetas que conocemos     |
 
 ```
-
-Una vez que levantas la terminal, vas a estar en la carpeta raiz de tu usuario, supongo vas a ver:
+Notar que `..` representa el directorio padre del que estoy parado y `.` el directorio actual.
+Una vez que levantas la terminal, vas a estar en la carpeta raíz de tu usuario, supongo vas a ver:
 
 ```
   C:\Users\Bruno>
@@ -127,7 +128,7 @@ Una vez que tengamos la carpeta del proyecto creada (en este ejemplo 'AnimeApp')
 
 > Nota2: Para más info de los comandos de git hay un archivo `git.md` en la carpeta `documentation`.
 
-Si ejecutamos un dir vamos a ver que apareció una carpeta nueva (`rails-api`), movamos nos adentro de esa carpeta.
+Si ejecutamos un `dir` vamos a ver que apareció una carpeta nueva (`rails-api`), movámonos adentro de esa carpeta.
 
 ---
 
@@ -144,6 +145,7 @@ Rails tiene "gemas" (paquetes) en sus aplicaciones, para levantar un proyecto es
 ---
 
 ## 3. Crear la base de datos
+Para mas información sobre base de datos, ver `documentation/database.md`
 
 Para poder guardar nuestros datos, la app tiene que crear la base de datos en postgres, la configuración la saca de `config/database.yml`
 
@@ -151,19 +153,19 @@ Para poder guardar nuestros datos, la app tiene que crear la base de datos en po
   C:\Users\Bruno\Desktop\Development\AnimeApp\rails-api> rails db:create
 ```
 
-La base que creamos está absolutamente en blanco, es importante correr las migraciones para crear las tablas de `Anime` y `Character`.
+La base que creamos está absolutamente en blanco. Vamos a ver más adelante el concepto de migración, pero por ahora pensémoslas como instrucciones para modificar la base de datos (agregar un atributo, crear una tabla, etc). Es importante correr las migraciones para crear las tablas de `Anime` y `Character`.
 
 ```
   C:\Users\Bruno\Desktop\Development\AnimeApp\rails-api> rails db:migrate
 ```
 
-Y por último yo genere un par de animes y personajes para que la base no empiece vacia, lo podes encontrar en `db/seeds.rb`. Para correr el seed ejecutamos
+Y por último yo generé un par de animes y personajes para que la base no empiece vacia, lo podes encontrar en `db/seeds.rb`. Para correr el seed ejecutamos
 
 ```
   C:\Users\Bruno\Desktop\Development\AnimeApp\rails-api> rails db:seed
 ```
 
-En general, cuando trabajen varias personas en un proyecto, los demas van a hacer sus modificaciones a la base (migraciones) y rails te va a putear cuando intentes levantar un proyecto sin correrlas, vamos a ir a esto después
+En general, cuando trabajen varias personas en un proyecto, los demás van a hacer sus modificaciones a la base (migraciones) y rails te va a putear cuando intentes levantar un proyecto sin correrlas, vamos a ir a esto después
 
 ---
 
@@ -177,15 +179,15 @@ Ahora podemos levantar el server!
   C:\Users\Bruno\Desktop\Development\AnimeApp\rails-api> rails s
 ```
 
-Si abris un browser y vas a `localhost:3000` te va a tirar la página de bienvenido a rails 🥳
+Si abrís un browser y vas a `localhost:3000` te va a tirar la página de bienvenido a rails 🥳
 
-Que esperas que te tire `localhost:3000/characters/1`? (para responder esto leer el archivo `documentation/rails.md`)
+¿Qué esperarías encontrar en la web `localhost:3000/characters/1`? (para responder esto leer el archivo `documentation/rails.md`)
 
-Y `localhost:3000/animes`? 
+¿Y en `localhost:3000/animes`? 
 
-* Que otras rutas se te ocurren? que nos devuelven datos?
+* ¿Qué otras rutas se te ocurren que nos devuelvan datos?
 
-* Que rutas crees nos pueden devolver un error?
+* ¿Qué rutas creés nos pueden devolver un error?
 
   Ojo que en windows cuando una ruta devuelve error EXPLOTA el servidor y tenes que matarlo, voy a ver de emprolijar eso.
 
@@ -200,7 +202,7 @@ Y `localhost:3000/animes`?
 
 ## Proximos pasos:
 
-  * Hay una carpeta que no es parte de la estructura de RoR, `documentation`.
+  * Hay una carpeta que NO es parte de la estructura de RoR, `documentation`.
   
-    Ahí dejé guias de distintas tematicas, te recomendaría empieces por la de rails pero la idea es un poco que sean independientes?, no sé todavía, proba y contame
+    Ahí dejé guias de distintas tematicas, te recomendaría empieces por la de rails pero la idea es un poco que sean independientes?, no sé todavía, probá y contame
   
