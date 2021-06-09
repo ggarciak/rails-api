@@ -6,8 +6,4 @@ json.characters @characters do |character|
   json.anime character.anime do |anime|
     json.name anime.name
   end
-
-  json.decks @fighting_decks do |fighting_deck|
-    json.deck json.deck
-  end 
 end

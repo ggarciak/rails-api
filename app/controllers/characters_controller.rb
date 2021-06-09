@@ -37,9 +37,19 @@ class CharactersController < ApplicationController
   end
 
   def deck
-    characters = Character.all.name.shuffle
-    decks = characters.slice(characters/2) # Agregar condicional en caso de que no sea divisible por 2
-    render :json
+    characters = Character.all.shuffle
+    
+    if (characters.length % 2)
+      decks = characters.each_slice(characters.length/2).to_a
+    else
+      characters.pop()
+      decks = characters.each_slice(characters.length/2).to_a
+    end
+
+    @deck1 = decks[0]
+
+    @deck2 = decks[1]
+    #creo que la lógica de esto está bien. No sé bien lo de los arrobas... Mmmm Jajaja
   end
 
   private
