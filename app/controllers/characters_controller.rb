@@ -36,6 +36,10 @@ class CharactersController < ApplicationController
     end
   end
 
+  # El metodo parece estar bien!
+  # No sabía como se hacía esto ni conocía each_slice jajaja
+  # Tip del nombre: Está bueno que describa que es lo que hace
+  # Ej: get_decks
   def deck
     characters = Character.all.shuffle
     
@@ -46,10 +50,39 @@ class CharactersController < ApplicationController
       decks = characters.each_slice(characters.length/2).to_a
     end
 
-    @deck1 = decks[0]
+  
+    # Tip de código, fijate que la linea 45 es igual a la 48, entonces no depende del if
 
+    # Para esto podes negar el if
+    #   if !(characters.length % 2)
+    #      characters.pop
+    #   end
+    #
+    #   decks = ...
+
+    # Extra tip: En rails el "if !" tiene un nombre, y es unless
+
+    # unless (characters.length % 2)
+    #   characters.pop
+    # end
+
+    # Este tip es porque se me dió la oportunidad pero no es relavnte
+
+    # -----------------------------
+
+    # Otro tip de código choto (en la misma linea que lo anterior), las siguientes
+    # dos lineas se pueden resumir a:
+
+    # @first_deck, @second_deck = decks
+
+    # Esto es array destructuring.
+
+    # -----------------------------
+
+    # Ultima bobada: No está bueno tener variables con numero
+
+    @deck1 = decks[0]
     @deck2 = decks[1]
-    #creo que la lógica de esto está bien. No sé bien lo de los arrobas... Mmmm Jajaja
   end
 
   private
@@ -61,5 +94,5 @@ class CharactersController < ApplicationController
       params.require(:character).permit(:name, :biography, :anime_id)
     end
 
-   end
+  end
 
