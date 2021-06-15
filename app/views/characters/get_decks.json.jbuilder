@@ -27,7 +27,7 @@
 # Cuando agregamos un "do" al final es porque vamos a hacer algo mas
 # Es como un begin, esto aplica también para cuando mires el routes.rb
 
-json.deck @deck1 do |deck1|
+json.first_deck @first_deck do |first_deck|
   # Acá adentro, estamos iterando sobre los objetos de @deck1, y estamos
   # diciendo que de ellos queremos devolver
 
@@ -37,9 +37,19 @@ json.deck @deck1 do |deck1|
   # Quiero todos los datos del personaje
 
   # Podes ver otras vistas para ayudarte
-
-  json.name deck1.name
+  json.character_id first_deck.id
+  json.name first_deck.name
+  json.biography first_deck.biography
+  json.anime_name first_deck.anime.name
+  json.is_evil first_deck.evil
+  json.hp_count first_deck.hp
 end
 
-json.deck @deck2 do |deck2|
+json.second_deck @second_deck do |second_deck|
+  json.character_id second_deck.id
+  json.name second_deck.name
+  json.biography second_deck.biography
+  json.anime_name second_deck.anime.name
+  json.is_evil second_deck.evil
+  json.hp_count second_deck.hp
 end

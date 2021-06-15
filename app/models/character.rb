@@ -1,6 +1,8 @@
 class Character < ApplicationRecord
   # Un personaje pertenece a 1 anime (1-N)
   belongs_to :anime
+
+  ####has_many :powers
   
   # Verifico que el nombre no sea vacio
   validates :name, presence: true

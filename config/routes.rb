@@ -23,7 +23,8 @@ Rails.application.routes.draw do
 
   resources :characters
 
-  get 'decks' => 'decks', as: :decks #está mal
+
+  get '/decks' => 'characters#get_decks'
 
   # 2. Como side note
   # Supongamos que queremos que la ruta sea algo especifico, ya sea porque no es una api

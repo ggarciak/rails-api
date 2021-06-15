@@ -40,15 +40,16 @@ class CharactersController < ApplicationController
   # No sabía como se hacía esto ni conocía each_slice jajaja
   # Tip del nombre: Está bueno que describa que es lo que hace
   # Ej: get_decks
-  def deck
+  def get_decks
     characters = Character.all.shuffle
     
-    if (characters.length % 2)
-      decks = characters.each_slice(characters.length/2).to_a
-    else
+    unless (characters.length % 2)
       characters.pop()
+    else
       decks = characters.each_slice(characters.length/2).to_a
+      @first_deck, @second_deck = decks
     end
+  end
 
   
     # Tip de código, fijate que la linea 45 es igual a la 48, entonces no depende del if
@@ -81,9 +82,6 @@ class CharactersController < ApplicationController
 
     # Ultima bobada: No está bueno tener variables con numero
 
-    @deck1 = decks[0]
-    @deck2 = decks[1]
-  end
 
   private
     def set_character
